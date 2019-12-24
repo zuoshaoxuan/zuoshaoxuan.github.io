@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>HTML5课程</title>
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<link rel="stylesheet" href="CSS/common2.css">
+<link rel="shortcut icon" href="img/小图标.ico" type="image/x-icon">
+<link rel="icon" href="img/小图标.ico" type="image/x-icon">
+<script src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<!--指导路径-->	
+<div style="width: 100%;height: 22px; background-color: #0757D7;">
+	<p>
+	<h4>当前位置-><a  href="index.html" style="text-decoration: none;color: black;">首页-></a><a  href="课程选项.html" style="text-decoration: none;color: black;">教程-></a><a  href="#" style="text-decoration: none;color: black;">建站基础教程</a>
+	</h4>
+	</div>
+<!--菜单-->
+<div class="sideMenu">
+    <ul>
+        <li class="nLi on">
+            <h3>建站基础教程</h3>
+            <ul class="sub">
+                <li><a href="建站基础1.html">1.网站设计</a></li>
+                <li><a href="">2.网络用户</a></li>
+                <li><a href="">3.网站标准</a></li>
+                <li><a href="">4.网站验证</a></li>
+				<li><a href="">5.万维网</a></li>
+				<li><a href="">4.网络安全</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<!--js脚本-->
+<script type="text/javascript">
+    $(function(){
+        $(".sideMenu .nLi h3").click(function(){
+            if($(this).parent(".nLi").hasClass("on")){
+                $(this).next(".sub").slideUp(300,function(){
+                    $(this).parent(".nLi").removeClass("on")
+                });
+            }else{
+                $(this).next(".sub").slideDown(300,function(){
+                    $(this).parent(".nLi").addClass("on")
+                });
+            }
+        })
+    })
+</script>
+</body>
+</html>

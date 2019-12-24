@@ -1,0 +1,162 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+<title>联系我们</title>
+<!--css样式-->
+	<style type="text/css">
+		.one{
+			text-align: center;
+			font-family:"Consolas", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "Monaco", "Courier New", "monospace"	
+		}
+		.footer{
+			width: 100%;
+			background-color:#D0C9A9;
+		} 
+		
+		.p1{
+			
+			font-size: 25px;
+			
+		}
+		.p2{
+			font-size: 40px;
+			text-align: center;
+		}
+		.a1{
+			text-decoration: none;
+	 		color:#000000; 
+		}
+		.section { height: 110px;}
+	</style>
+	<link rel="shortcut icon" href="img/小图标.ico" type="image/x-icon">
+	<link rel="icon" href="小图标.ico.ico" type="image/x-icon">
+	<link rel="stylesheet" href="CSS/common.css">
+	<link rel="stylesheet" href="CSS/jdc-side-panel.css">
+<!--js调用-->
+	<script type="text/javascript" src="js/jquery.include.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	
+</head>
+
+<body bgcolor="#FBE0A8">
+<!--指导路径-->	
+	<div style="width: 100%;height: 22px; background-color: azure;">
+		<p><h4>当前位置-><a  href="index.html" style="text-decoration: none;color: black;">首页-></a><a  href="lianxi.html" style="text-decoration: none;color: black;">联系我们</a></h4></div>
+	<!--主题内容-->
+	<p class="p2"><b>联系我们</b></p>
+	<div class="one">
+		<p class="p1">QQ: 1816588078 </p>
+		<p class="p1">微信：tsy1234567891</p>
+		<p class="p1"><a class="a1" href="mailto:1816588078@qq.com">邮箱：1816588078@qq.com</a></p>
+		<p class="p1">地址：安徽省巢湖市半汤街道巢湖学院男寝7栋607</p>
+	</div>
+	<script type="text/javascript" id="Audio">
+		$("#Audio").include("audio.html");
+	</script>
+<!--二维码-->
+<div style="margin-top: 2px; margin-bottom: 20px;" align="center">
+		<span style="width: 400px;height: 400px; float: inherit">
+		<img src="img/QQ.jpg" alt="QQ" width="350" height="350"><br>
+		<p style="text-align: center">QQ</p>
+		</span>
+		<span style="width: 400px;height: 400px; ">
+			<img src="img/vx.png" alt="微信" width="350" height="350"><br>
+		<p align="center">微信</p>
+		</span>
+		</div>
+	
+<!--页脚-->
+<div class="ssection">	
+<div class="footer"> 
+	<hr/>
+	<footer style="text-align: center;" >
+		<br/>
+			<nav>
+				<a class="cur" href="index.html" title="首页">首页</a>
+				<a href="课程选项.html" title="教程">教程</a>
+				<a href="novel.html" title="小说">小说</a>
+				<a href="game_menu.html" title="游戏">游戏</a>
+				<a href="audio.html" title="音乐">音乐</a>
+				<a href="video.html" title="视频">视频</a>
+				<a href="about-our.html" title="关于">关于我们</a>
+				<a href="lianxi.html" title="联系">联系我们</a>
+				<a href="lianxi.html" title="留言">在线留言</a>
+			</nav>		
+		
+<!--setInterval实时显示时间-->
+<p id="time1" style="color: blueviolet; " >当前时间是:</p>
+<script>
+    function mytime(){
+        var a = new Date();
+        var b = a.toLocaleTimeString();
+        var c = a.toLocaleDateString();
+        document.getElementById("time1").innerHTML = c+"&nbsp"+b+"&nbsp";
+        }
+    setInterval(function() {mytime()},1000);
+</script>
+	<p>版权所有 ©2019 <a href="index.html" class="a1">CH607</a></p>
+		<br/>
+</footer>
+</div>
+</div>	
+<!--浮动客服-->
+	<div class="jdc-side" style="display: block;">
+  <div class="mod_hang_qrcode jdc_feedback_qrcode">
+    <div class="mod_hang_qrcode_btn"><i class="jdcfont"></i><span>破解软件</span></div>
+    <div class="mod_hang_qrcode_show">
+      <div class="mod-qr-tips"></div>
+      <div class="mod_hang_qrcode_show_bg">
+        <div id="canvas" style="height: 123px; width: 123px;"><img src="img/vx.png" alt="ceshi" style="height: 123px; width: 123px;"></div>
+      </div>
+      <p>扫一扫，找免费软件</p>
+    </div>
+  </div>
+  <div class="mod_hang_appeal">
+    <div class="mod_hang_appeal_btn"><i class="jdcfont"></i> <span>提供服务</span></div>
+    <div class="mod_hang_appeal_show">
+      <ul>
+        <li><a href="#" target="_blank">
+          <div class="icon_box"><i class="jdcfont"></i></div>
+          <div class="text_box">
+            <h5>毕业系统设计</h5>
+            <p>软件工程，计算机科学专业，详情请咨询</p>
+          </div>
+          </a></li>
+        <li id="entry"><a href="#" target="_blank" class="f-cb">
+          <div class="icon_box"><i class="jdcfont"></i></div>
+          <div class="text_box">
+            <h5>技术服务</h5>
+            <p>365天技术支持，按量收费，低至一毛</p>
+          </div>
+          </a></li>
+        <li><a href="#" target="_blank" class="f-cb">
+          <div class="icon_box"><i class="jdcfont"></i></div>
+          <div class="text_box">
+            <h5>建站问题</h5>
+            <p>免费服务，一天内及时回复</p>
+          </div>
+          </a></li>
+      </ul>
+    </div>
+    </div>
+  <div class="mod_hang_qrcode jdc_hang_qrcode"><a class="mod_hang_qrcode_btn"><i class="jdcfont"></i><span>扫码添加</span></a>
+    <div class="mod_hang_qrcode_show">
+      <div class="mod_hang_qrcode_show_bg"></div>
+      <p>站长QQ私密号</p>
+    </div>
+  </div>
+  <div class="mod_hang_qrcode mod_hang_top"><a href="#" class="mod_hang_qrcode_btn"><i class="jdcfont"></i><span>返回顶部</span></a></div>
+  <div class="el-dialog__wrapper" style="display: none;">
+    <div class="el-dialog el-dialog--small" style="top: 15%;">
+      <div class="el-dialog__header"><span class="el-dialog__title"></span>
+        <div type="button" class="el-dialog__headerbtn"><i class="el-dialog__close el-icon el-icon-close"></i></div>
+      </div>
+      </div>
+  </div>
+</div>
+</body>
+</html>

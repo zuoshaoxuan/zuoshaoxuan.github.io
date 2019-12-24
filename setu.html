@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>色图</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+		function setu() {
+			var radios = document.getElementsByName("isR18");
+			var isR18;
+			for(var i = 0; i < radios.length; i++) {
+				if(radios[i].checked){
+					isR18 = radios[i].value;
+					break;
+				}
+			}
+			var keyword = document.getElementById("keyword").value;
+			var url = "https://api.lolicon.app/setu/?r18=" + isR18 + "&keyword=" + keyword;
+			var httpRequest = new XMLHttpRequest();
+			httpRequest.open('GET', url, true);
+			httpRequest.send();
+
+			httpRequest.onreadystatechange = function () {
+				if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+					var json = httpRequest.responseText;
+					var obj = JSON.parse(json);
+
+					var title = obj.data[0].title;
+					var author = obj.data[0].author;
+					var pid = obj.data[0].pid;
+					var uid = obj.data[0].uid;
+					var width = obj.data[0].width;
+					var height = obj.data[0].height;
+					var picUrl = obj.data[0].url;
+
+					var text = 	"标题： " + title + "<br/>" +
+								"作者： " + author + "<br/>" + 
+								"pid： " + pid + "<br/>" + 
+								"uid： " + uid + "<br/>" + 
+								"宽： " + width + "px<br/>" + 
+								"高： " + height + "px<br/>" + 
+								"标签： ";
+					for(var i in obj.data[0].tags) {
+						text += obj.data[0].tags[i] + "&nbsp;&nbsp;&nbsp;";
+					}
+					text += "<br/><a href='" + picUrl + "' target=\"_blank\">点击下载图片</a><br/><br/>";
+					
+					var pic = "<img src=" + obj.data[0].url +" />";
+
+					document.getElementById("content").innerHTML = text;
+					document.getElementById("pic").innerHTML = pic;
+				}
+			}
+		}
+	</script>
+
+	<input type="radio" name="isR18" value="0" checked />非R18
+	<input type="radio" name="isR18" value="1" />R18
+	<input type="radio" name="isR18" value="2" />混合
+	<br>
+	附加关键字搜索： <input type="text" id="keyword">（可以为空，输入不常见的关键字可能会查询不出结果）
+	<br><br>
+	<button name="search" onclick="setu()">随机一下！</button>
+	(Special thanks: <a href="https://api.lolicon.app/#/setu" target="_blank">Lolicon API</a>)
+	<br><br>
+	<div id="content"></div>
+	<div id="pic"></div>
+
+</body>
+</html>
