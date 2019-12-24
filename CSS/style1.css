@@ -1,0 +1,130 @@
+/* CSS Document */
+
+	.div{
+		width: 100%;
+		
+	}
+	.div1{
+		width: 100%;
+		height: 300px;
+	}
+	.div2{
+		
+		float:right;
+		margin-right: 1px;
+		text-align: center;
+		height: 10px;
+	}
+	.div3{
+		width:auto;
+		height:20px;
+		font-size:12px;
+	}
+
+	.one{
+		 width: 100%;
+		 height: auto;
+		background-color:#CC8808;	
+	}
+	.two{
+		width: 100%;
+		height: 500px;
+	}
+	.three{
+		width: 300px;
+		height: auto;
+		float:left;
+	}
+	.four{
+		width: 300px;
+		height: 5px;
+		background-color:#000000;
+	}
+	.five{
+		width: 300px;
+		height: 90px;
+	}
+	.six{
+		width: 35px;
+		height: 400px;
+		float: left;
+	}
+	.seven{
+		width: 100%;
+		height: 130px;
+		float: left;
+		background-color: antiquewhite;
+	}
+	.enight{ 
+		width: 100%;
+		height: 3px;		
+	}
+	.imgL{
+		width: 0px;
+		height: 100px;
+		float: left;
+	}
+	.imgR{
+		width: 110px;
+		height: 10px;
+		float: right;
+		
+	}
+	.text{
+		width: 55%;
+		text-align:right;
+		float: inherit;
+			
+	}
+	.a{
+		text-decoration: none;
+	}
+	.a1{
+		text-decoration: none;
+		color: #000000;
+	}
+	#a2 a:link{color:#2D40B1;text-decoration: none;}
+	#a2 a:visited{color:black;text-decoration: none;}
+	#a2 a:hover{color: greenyellow; text-decoration: none;}
+	#a2 a:active{color:gainsboro; text-decoration: none;}
+
+	.blank1{
+			width: 100%;
+			height: 3px;
+			float: left;		
+		}
+	.blank2{
+			width: 100%;
+			height: 50px;
+			float: left;		
+		}
+	.d1{
+		margin:10px auto;
+		width:100%;/*调节宽度*/
+		background-color:#CCCCCC;
+		height:20px;
+		overflow:hidden;
+		white-space:nowrap;
+			}
+	.d2{
+		margin:0px auto;
+		background-color:#FF9933;
+			}
+	
+	.div-update1{
+		background-color: #FF7D00;
+		height: 40px;
+		text-align: right;
+	}
+	.div-update2{
+		background-color: #FF7D00;
+		height: 40px;
+		text-align:center;
+	}
+	.h3{
+		font-family:"华文琥珀", "楷体", "幼圆", "华文彩云";
+		font-size: 30px;
+		
+	}
+
+

@@ -1,0 +1,24 @@
+@charset "utf-8";
+*{margin:0; padding:0;}
+body{width: 800px; margin-left: 350px; background-image: url("../img/建站基础.jpg")}
+.clearfix:after{ display:block; visibility:hidden; clear:both; height:0; content:"";}
+.clearfix{zoom:1;}
+
+h1{ text-align: center; font-family: 'Microsoft YaHei'; font-size: 24px; color: #333; padding:20px 0; border-bottom: 1px solid #ddd;}
+h2{ text-align: center; font-family: 'Microsoft YaHei'; font-size: 18px; color: #333; padding:20px 0;}
+.iframe { text-align: center;}
+.iframe ul li{ display: inline-block; width: 250px; height: 600px; padding:20px; margin:20px 10px; list-style: none; box-shadow: 0 0 3px 3px #e3e3e3; overflow: auto;}
+
+
+
+/*左侧导航菜单    home*/
+.sideMenu{ border:1px solid #ddd; margin-top: 10px; }
+.sideMenu h3{ height:32px; line-height:32px; padding-left:10px; border-top:1px solid #e3e3e3; background:hsla(131,61%,46%,0.73);cursor:pointer; font-family: 'Microsoft YaHei'; font-size: 14px; color: #333;
+	text-align: center;
+}
+.sideMenu ul .nLi.on .sub{ display: block;}
+.sideMenu ul .nLi .sub{ padding:8px 0; color:#D19BC1; display:none; }
+.sideMenu ul .nLi .sub li{ height: 30px; line-height: 30px; list-style: none;}
+.sideMenu ul .nLi .sub li a{ display: block; width: 100%; height: 100%; font-family: 'Microsoft YaHei'; font-size: 14px; color: #fff; text-decoration: none; padding:0 25px; box-sizing:border-box;}
+.sideMenu ul .nLi .sub li a:hover{ background:hsla(116,33%,51%,0.61)}
+/*左侧导航菜单    end*/
