@@ -8,69 +8,52 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 <!--css样式-->
-<style>
-* { margin: 0; padding: 0;}
-.menu .header { position: fixed; left: 0; top: 0; width: 100%; background-color:#EDD6A1;}
-.menu .inner { width: 1200px; margin: 0 auto; overflow: hidden; zoom: 1;}
-.menu h1 { float: left;}
-.menu h1 img { display: block; border: 0;}
-.menu .nav { float: right; list-style-type: none; font-family: "Microsoft Yahei"; margin-right: 10px;}
-.menu .nav li { float: left; margin-left: 5px;}
-.menu .nav a { float: left; color: #00C0F2; text-decoration: none;}
-.menu .nav a:hover { background-color: #E7A154;}
-
-.menu .large .inner { padding: 20px 0;}
-.menu .large h1 img { height: 64px;}
-.menu .large .nav { padding-top: 10px;}
-.menu .large .nav a { height: 44px; padding: 0 20px; line-height: 44px; font-size: 18px;}
-
-.menu .small .inner { padding: 10px 0;}
-.menu .small h1 img { height: 34px;}
-.menu .small .nav { padding-top: 3px;}
-.menu .small .nav a { height: 28px; padding: 0 10px; line-height: 28px; font-size: 14px;}
-
-.menu .header, .menu .inner, .menu a, .menu img, .menu li { transition: all 1s; -moz-transition: all 1s; -webkit-transition: all 1s; -o-transition: all 1s;}
-	
-h3,ul,li{margin:0;padding:0; list-style:none;}
-.scrollbox{ width: 300px; margin: 0 auto; overflow: hidden; border: 1px solid #CFCFCF; padding: 10px; }
-#scrollDiv{width:300px;height:430px; overflow:hidden;}/*这里的高度和超出隐藏是必须的*/
-#scrollDiv li{height:90px; width:270px; padding:0 20px; no-repeat 10px 23px; overflow:hidden; vertical-align:bottom; zoom:1; border-bottom:#B7B7B7 dashed 1px;}
-#scrollDiv li h3{ height:24px; padding-top:13px; font-size:14px; color:#353535; line-height:24px; width:300px;}
-#scrollDiv li h3 a{color:#353535; text-decoration:none}#scrollDiv li h3 a:hover{ color:#F00}
-#scrollDiv li div{ height:36px; width:270px; color:#416A7F; line-height:18px; overflow:hidden}
-#scrollDiv li div a{ color:#416A7F; text-decoration:none}
-
-.scroltit{ height:26px; line-height:26px; padding-bottom:4px; margin-bottom:4px;}
-.scroltit h3{ width:100px; float:left;}
-.scroltit .updown{float:right; width:32px; height:22px; margin-left:4px}
-#but_up{ background:url(img/up.gif) no-repeat 0 0; text-indent:-9999px}
-#but_down{ background:url(img/down.gif) no-repeat 0 0; text-indent:-9999px}
-	
-.footer{
-			width: 100%;
-			background-color:#D0C9A9;
-		}
-.header1{background-color: #76E6D6; height: 25px; width: 800px;}
-.header2{background-color: #76E6D6; height: 25px; width: 1150px;margin-left: 180px;}
-.span1{width: 200px;height:500px; }
-.section1 { height: 180px;}
-.section2 { height: 110px;}
-.section3{ height: 600px; margin-top: 2px; width: 100%;}
-.section4{ width: 100%;margin-top: 5px; height: 700px;}
-.a{text-decoration: none;color: #000000;}
-.gundong{color:#333; font-size:13px;}
-.zxx_body .zxx_constr {width: 1210px;}	
-</style>
+<link rel="stylesheet" href="CSS/style7.css">
+<link rel="stylesheet" href="CSS/style5.css">
 <link rel="stylesheet" href="CSS/style1.css">
 <link rel="stylesheet" href="CSS/common.css">
 <link rel="stylesheet" href="CSS/jdc-side-panel.css">
 <link rel="shortcut icon" href="img/小图标.ico" type="image/x-icon">
 <link rel="icon" href="img/小图标.ico" type="image/x-icon">	
 <!--js-->
+<script type="text/javascript" src="js/jquery.min.js"> </script>
 <script type="text/javascript" src="js/gundongRL.js"></script>
-<script src="js/jquery.min.js"></script>
 <script src="js/jq_scroll.js" type="text/javascript"></script>
+<script src="jquery.min.js"></script>
 <script src="js/jquery-powerSwitch.js"></script>
+<script type="text/javascript" src="js/jfade.js"></script>
+<link rel="stylesheet" href="css/style6.css"  type="text/css"/> 
+
+<script type="text/javascript">  
+$().ready(function() {
+	$('.jfade_image').jfade();
+	$('.portfolio').jfade({
+		start_opacity: ".4",
+		high_opacity: "1",
+		low_opacity: ".2",
+		timing: "500"
+	});
+	$('.button').jfade({
+		start_opacity: "1",
+		high_opacity: "1",
+		low_opacity: ".4",
+		timing: "500"
+	});
+	$('.text').jfade({
+		start_opacity: "1",
+		high_opacity: "1",
+		low_opacity: ".7",
+		timing: "500"
+	});
+	$('.links').jfade({
+		start_opacity: ".9",
+		high_opacity: "1",
+		low_opacity: ".2",
+		timing: "500"
+	});
+});  
+</script>
+	
 <script type="text/javascript">
 $(document).ready(function(){
      $("#scrollDiv").Scroll({line:1,speed:500,timer:2000,up:"but_up",down:"but_down"});
@@ -89,17 +72,17 @@ $(function(){
 });
 </script>
 </head>
-<body class="menu">
+<body class="menu">	
 <div class="header large">
 	<div class="inner">
 		<h1><a href="http://www.ch607.cn/"><img src="img/图标小.png" alt="logo"></a></h1>
-		<div class="div2" id="a2"><h4><a href="login.html">登陆</a>/<a href="register.html">注册</a></h4></div>
+		<div class="div2" id="a2"><h4><!--<a href="login.html">登陆</a>/<a href="register.html">注册</a>--><a href="使用条款.html">请仔细阅读使用条款</a></h4></div>
 		<ul class="nav">
 			<li><a class="cur" href="index.html" title="首页">首页</a></li>
 			<li><a href="课程选项.html" title="教程">教程</a></li>
-			<li><a href="https://www.ch607.cn/book.github.io/" title="小说">小说</a></li>
+			<li><a href="../小说代码/index.html" title="小说">小说</a></li>
 			<li><a href="game_menu.html" title="游戏">游戏</a></li>
-			<li><a href="audio.html" title="音乐">音乐</a></li>
+			<li><a href="../电台音乐/index.html" title="音乐">音乐</a></li>
 			<li><a href="video.html" title="视频">视频</a></li>
 			<li><a href="about-our.html" title="关于">关于我们</a></li>
 			<li><a href="lianxi.html" title="联系">联系我们</a></li>
@@ -109,10 +92,10 @@ $(function(){
 </div>
 
 <!--分割线-->	
-<div style="margin-top: 110px">
+<div style="margin-top: 120px">
 	<hr/>
 </div>	
-<!--设计容器1-->	
+<!--设计容器1(教程)-->	
 <div class="section1">
 	<!--中间图标-->
 	<div style="margin-top: 5px" align="center" class="seven">
@@ -121,10 +104,10 @@ $(function(){
 <hr/>
 	 <!--滚动字幕从右到左-->
 	   <div class="d1" id="div1" onmouseover="clearInterval(timer)" onmouseout="timer=setInterval(mar,30)">
-    		<span class="div3" id="div2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;欢迎来到左少轩の窝，本网站是由ch607开发组开发，版权所有！本网站资源来源于网路，侵权必删！祝您玩的愉快！&nbsp;&nbsp;&nbsp;<a href="http://www.bimibimi.tv/">本网站和M站，有兴趣的小伙伴可以前去逛逛，一堆免费的动漫哦。</a>&nbsp;&nbsp;ch607小组正在开发的视频音乐型论坛，注册会员皆可以免费变成超级会员，享受我们的极致服务，超级会员等你来领！&nbsp;&nbsp;视频会员半价开售！千万好剧，大片电影一举擒获。即日开通大会员即可享受更优质服务&nbsp;&nbsp;周董的歌不能免费听？正版授权，现在免费听，注册即可收听！&nbsp;&nbsp;<a>开发成功了!!祝我们加油!!!!!!!!!!!!!!!</a>&nbsp;&nbsp;</span><span id="div3" class="div3"></span>
+    		<span class="div3" id="div2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;欢迎来到左少轩の窝，本网站是由ch607开发组开发，版权所有！本网站资源来源于网路，侵权必删！祝您玩的愉快！&nbsp;&nbsp;&nbsp;<a href="http://www.bimibimi.tv/">本网站提供链接到M站，有兴趣的小伙伴可以前去逛逛，一堆免费的动漫哦。</a>&nbsp;&nbsp;ch607小组正在开发的视频、音乐电台、小说等各大子网请期待，按照我们的习惯一切免费，快来享受我们的极致服务，好看好玩的等你来赏！&nbsp;&nbsp;站长至各位用户的一封信！站长的心声吐露。&nbsp;&nbsp;本网站没有登陆注册的功能，一切完全免费！说到做到，白嫖一时爽，一直白嫖一直爽&nbsp;&nbsp;<a>综合性网站项目成功了!!祝我们加油!!!!!!!!!!!!!!!</a>&nbsp;&nbsp;</span><span id="div3" class="div3"></span>
 		</div>
 </div>
-<!--设计容器2-->
+<!--设计容器2（热点资讯）-->
 <div class="section3">
 <!--区域一的设计-->
 	<!--头部设计-->
@@ -147,7 +130,7 @@ $(function(){
 				<div style="margin-left: 30px; width: 350px; height: 110px;float: left;">
 					<span><a class="a" href="html_menu.html"><img src="img/html5.png" alt="html5教程"/></a></span>
 					<span style="float: right; width: 200px">
-						<h3><a class="a" href="html_menu.html">HTML5基础</a></h3>
+						<h3><a class="a" href="html_menu.html">HTML5基础教程</a></h3>
 						<p>开始开发你的网站之前，你要将本教程学完，这样你就可以制作你自己的静态网站了，展示你的博文</p>
 					</span>
 				</div>
@@ -211,10 +194,11 @@ $(function(){
     		<div id="scrollDiv">
         	<ul>
             <li><h3><a href="#" class="linktit">CH607小组</a></h3><div>CH607小组成功创立了，有一样志向的同学可以和我们一起创作哦</div></li>
-            <li><h3><a href="#" class="linktit">不停转动向上滚动可控制向上向下滚动特效</a></h3> <div>DIV CSS JS自动不断向上一个一个滚动可控制向上向下滚动特效... </div></li>
-            <li><h3><a href="#" class="linktit">全国涂料总产量呈现直线下滑态势</a></h3> <div>我国涂料工业将面临涂料消费税征收全面铺开，环保压力持续增加，2015年的形势不容乐观... </div></li>
-            <li><h3><a href="#" class="linktit">镂空渔网超吸睛</a></h3> <div>镂空罩衫，短短的版型穿起来显高又俏皮，内搭长款连衣裙，非常大方哦... </div></li>
-            <li><h3><a href="#" class="linktit">主题创业街亮相</a></h3> <div>目前已有包括咖啡厅、酒吧、餐厅、瑜伽室在内的8家商铺入驻该火车... </div></li>
+            <li><h3><a href="#" class="linktit">小说上新</a></h3> <div>全新玄幻小说《龙婿大丈夫》开始更新，还不进来看看吗？ </div></li>
+            <li><h3><a href="#" class="linktit">小左电台</a></h3> <div>站长自己亲自上场每周给你带来新的热点事件，2020年，要你爱上听热点资讯... </div></li>
+            <li><h3><a href="#" class="linktit">C语言教程基本完结</a></h3> <div>撒花~~~~，C语言文字教程的基本写好，站长会在何时的时机全部放出，视频还在录制中，请大家不要着急。</div></li>
+            <li><h3><a href="#" class="linktit">当当当，大家好</a></h3> <div>目前网站已有包括教程、视频、音乐电台、小说、游戏在内的五大板块和子网正在赶制中... </div></li>
+			<li><h3><a href="#" class="linktit">站娘（男）设计</a></h3> <div>快来参与设计吧！丰厚礼物等着你！详情请戳标题进入</div></li>
         </ul>
    		</div>
     	<div class="scroltit"><div class="updown" id="but_down">向上</div><div class="updown" id="but_up">向下</div></div>
@@ -223,46 +207,130 @@ $(function(){
 	</div>
 	
 </div>
-<!--设计容器3-->
+<!--设计容器3（游戏）-->
 <div class="section4">
 	<!--头部设计-->
-		<div class="header2">
+	<div class="header2">
 			<div align="left"><img src="img/花边1左.png" alt="花边左"  style="width: 20px; height: 25px; float: left"><span style="margin-left: 500px"><a href="课程选项.html" class="a">游&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;戏</a></span>
 			<img src="img/花边1右.png" alt="花边左"  style="width: 20px; height: 25px; float:right">
-			</div>
+			<span style="margin-right: 10px; float: right"><a href="#" style="text-align: right" class="a">更多...</a></span>
+	</div>
 	<!--内容设计-->
-			<div>
-				<span class="span1"><img src="#" alt="王者荣耀"/></span>
-				<span class="span1"><img src="#" alt="碧蓝航线"/></span>
-				<span class="span1"><img src="#" alt="QQ飞车"/></span>
-				<span class="span1"><img src="#" alt="我的世界"/></span>
-				<span class="span1"><img src="#" alt="简单的"/></span>
-				<span class="span1"><img src="#" alt="第六"></span>
-				<span class="span1"><img src="#" alt="第七"></span>
-				<span class="span1"><img src="#" alt="第八"></span>
-			</div>
-			<font style="color: #FF0004;" size="+6">正在开发中</font>
-		</div>
-</div>
+		<div class="div4">
+        	<div id="content">
+            <ul class="accordion" id="accordion">
+                <li class="bg1">
+                    <div class="heading">王者荣耀</div>
+                    <div class="bgDescription"></div>
+                    <div class="description">
+                        <h2>王者荣耀</h2>
+                        <p>国民MOBA手游大作！5V5王者峡谷、公平对战、还原MOBA经典体验！10秒实时跨区匹配，与好友开黑上分，向最强王者进击！多款英雄任凭选择，一血、五杀、超神，实力碾压，收割全场！</p>
+                        &nbsp;&nbsp;<a href="#" target="_blank">更多 &rarr;</a>
+                    </div>
+                </li>
+                <li class="bg2">
+                    <div class="heading">和平精英</div>
+                    <div class="bgDescription"></div>
+                    <div class="description">
+                        <h2>和平精英</h2>
+                        <p>《和平精英》是腾讯光子工作室群自研打造的军事竞赛体验手游。虚幻引擎4研发,次世代完美画质,极致视听感受;超大实景地图,打造指尖战场,全方面自由施展战术;百人同场！ </p>
+                        &nbsp;&nbsp;<a href="#" target="_blank">更多 &rarr;</a>
+                    </div>
 
-	
+                </li>
+                <li class="bg3">
+                    <div class="heading">碧蓝航线</div>
+                    <div class="bgDescription"></div>
+                    <div class="description">
+                        <h2>碧蓝航线</h2>
+                        <p>这是一个表面被71%的海水覆盖着的蓝色星球，人类在这片碧蓝色之中出生、成长、孕育和发展属于自己的文明。然		而，伴随着它们的，还有不断膨胀的野心和欲望。</p>
+                        &nbsp;&nbsp;<a href="#" target="_blank">更多 &rarr;</a>
+                    </div>
+
+                </li>
+                <li class="bg4 bleft">
+                    <div class="heading">跑跑卡丁车</div>
+                    <div class="bgDescription"></div>
+                    <div class="description">
+                        <h2>跑跑卡丁车</h2>
+                        <p>跑跑卡丁车是韩国NEXON公司出品的一款休闲类赛车竞速游戏，可以驾驶卡丁车在沙漠、城镇、森林、冰河、矿山、墓地等多种主题的赛道上进行游戏。</p>
+                        &nbsp;&nbsp;<a href="#" target="_blank">更多 &rarr;</a>
+                    </div>
+                </li>
+				<!--<li class="bg5 bleft">
+					<div class="heading">跑跑卡丁车</div>
+                    <div class="bgDescription"></div>
+                    <div class="description">
+                        <h2>跑跑卡丁车</h2>
+                        <p>跑跑卡丁车是韩国NEXON公司出品的一款休闲类赛车竞速游戏，可以驾驶卡丁车在沙漠、城镇、森林、冰河、矿山、墓地等多种主题的赛道上进行游戏。</p>
+                        &nbsp;&nbsp;<a href="#" target="_blank">更多 &rarr;</a>
+                    </div>
+				</li>-->
+            </ul>
+        </div>
+        <!--js脚本 -->
+       	 <script type="text/javascript">
+            $(function() {
+                $('#accordion > li').hover(
+                    function () {
+                        var $this = $(this);
+                        $this.stop().animate({'width':'480px'},500);
+                        $('.heading',$this).stop(true,true).fadeOut();
+                        $('.bgDescription',$this).stop(true,true).slideDown(500);
+                        $('.description',$this).stop(true,true).fadeIn();
+                    },
+                    function () {
+                        var $this = $(this);
+                        $this.stop().animate({'width':'115px'},1000);
+                        $('.heading',$this).stop(true,true).fadeIn();
+                        $('.description',$this).stop(true,true).fadeOut(500);
+                        $('.bgDescription',$this).stop(true,true).slideUp(700);
+                    }
+                );
+            });
+        </script>
+	   </div>
+	</div>
+</div>
+<!--设计容器4（音乐）-->
+<div class="section5">
+		<!--头部设计-->
+		<div class="header2">
+			<div align="left"><img src="img/花边1左.png" alt="花边左"  style="width: 20px; height: 25px; float: left"><span style="margin-left: 500px"><a href="../电台音乐/index.html" class="a">音&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;乐</a></span>
+			<img src="img/花边1右.png" alt="花边左"  style="width: 20px; height: 25px; float:right">
+			<span style="margin-right: 10px; float: right"><a href="#" style="text-align: right" class="a">更多...</a></span>
+			</div>
+		<!--内容设计-->
+		<div style="margin-top: 15px;">
+			<div id="wrapper">
+				<div id="footer">
+			 		<a href="#" title="周杰伦" class="links"><img src="img/周杰伦.png" alt=""></a>
+					<a href="#" title="陈奕迅" class="links"><img src="img/陈奕迅.png" alt=""></a>
+					<a href="#" title="林俊杰" class="links"><img src="img/林俊杰.png" alt=""></a>
+					<a href="#" title="薛之谦" class="links"><img src="img/薛之谦.png" alt=""></a>
+					<a href="#" title="李荣浩" class="links"><img src="img/李荣浩.png" alt=""></a>
+					<a href="#" title="鹿晗" class="links"><img src="img/鹿晗.png" alt=""></a>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
 <!--尾部-->	
 <div class="section2">
 	<!--页脚-->
 	<div class="footer"> 
 		
-		<footer style="text-align: center;" >
+	<footer style="text-align: center;" >
 			<br/>
 			<nav>
 				<a class="cur" href="index.html" title="首页">首页</a>
 				<a href="课程选项.html" title="教程">教程</a>
-				<a href="https://www.ch607.cn/book.github.io/" title="小说">小说</a>
+				<a href="../小说代码/index.html" title="小说">小说</a>
 				<a href="game_menu.html" title="游戏">游戏</a>
 				<a href="audio.html" title="音乐">音乐</a>
 				<a href="video.html" title="视频">视频</a>
 				<a href="about-our.html" title="关于">关于我们</a>
 				<a href="lianxi.html" title="联系">联系我们</a>
-				<a href="lianxi.html" title="留言">在线留言</a>
 			</nav>		
 		<!--setInterval实时显示时间-->
 	<p id="time1" style="color: blueviolet; " >当前时间是:</p>
@@ -275,7 +343,7 @@ $(function(){
         }
     setInterval(function() {mytime()},1000);
 	</script>
-	<p>版权所有 ©2019-2020<a href="index.html" style="color: #000000; text-decoration: none">CH607</a></p>
+	<p>版权所有 ©2019-2020 <a href="index.html" style="color: #000000; text-decoration: none">CH607</a></p>
 		<br/>
 	</footer>
 	</div>	
@@ -297,25 +365,25 @@ $(function(){
     <div class="mod_hang_appeal_btn"><i class="jdcfont"></i> <span>提供服务</span></div>
     <div class="mod_hang_appeal_show">
       <ul>
-        <li><a href="#" target="_blank">
+        <li><a href="破解软件/index.html" target="_blank">
           <div class="icon_box"><i class="jdcfont"></i></div>
           <div class="text_box">
-            <h5>毕业系统设计</h5>
-            <p>软件工程，计算机科学专业，详情请咨询</p>
+            <h5>找免费软件</h5>
+            <p>大多数常用破解软件都有</p>
           </div>
           </a></li>
-        <li id="entry"><a href="#" target="_blank" class="f-cb">
+        <li id="entry"><a href="使用条款.html" target="_blank" class="f-cb">
           <div class="icon_box"><i class="jdcfont"></i></div>
           <div class="text_box">
-            <h5>技术服务</h5>
-            <p>365天技术支持，按量收费，低至一毛</p>
+            <h5>使用说明</h5>
+            <p>为了您的合法利益，请您过目</p>
           </div>
           </a></li>
-        <li><a href="#" target="_blank" class="f-cb">
+        <li><a href="赞助/赞助.html" target="_blank" class="f-cb">
           <div class="icon_box"><i class="jdcfont"></i></div>
           <div class="text_box">
-            <h5>建站问题</h5>
-            <p>免费服务，一天内及时回复</p>
+            <h5>赞助</h5>
+            <p>自愿赞助，不做要求，每月流水公布</p>
           </div>
           </a></li>
       </ul>
@@ -335,6 +403,6 @@ $(function(){
       </div>
       </div>
   </div>
-</div>	
+</div>
 </body>	
 </html>
