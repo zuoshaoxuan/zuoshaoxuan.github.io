@@ -4,7 +4,7 @@
 .mod-qr-tips { height: 70px; background: url(../img/qrtips.png) center no-repeat; background-size: 100% }
 .mod_hang_qrcode_show { display: none; position: absolute; left: 70px; top: -65px; width: 138px; min-height: 166px; border: 0 none; background: #fff; -webkit-box-shadow: 0 0 10px 0 rgba(20,34,67,.1); -moz-box-shadow: 0 0 10px 0 rgba(20,34,67,.1); box-shadow: 0 0 10px 0 rgba(20,34,67,.1) }
 .mod_hang_qrcode_show p { margin-top: 5px; line-height: 16px; color: #666; font-size: 12px; text-align: center }
-.mod_hang_qrcode_show_bg { width: 124px; height: 124px; margin: 8px auto 0; background-position: 0 0; background-repeat: no-repeat; -moz-background-size: 124px auto; background-size: 124px auto; background-image: url(../CSS%E5%8F%B3%E4%B8%8B%E8%A7%92%E6%82%AC%E6%B5%AE%E5%AE%A2%E6%9C%8D%E4%BB%A3%E7%A0%81/images/qrcode.png) }
+.mod_hang_qrcode_show_bg { width: 124px; height: 124px; margin: 8px auto 0; background-position: 0 0; background-repeat: no-repeat; -moz-background-size: 124px auto; background-size: 124px auto; background-image: url(../img/qrcode.png) }
 .jdc_hang_qrcode .mod_hang_qrcode_show_bg { background-image: url("../img/QQ.jpg") }
 .jdc_hang_qrcode p { padding-bottom: 5px }
 .mod_hang_qrcode_btn { display: block; width: 60px; height: 60px; color: #0989c5; font-size: 40px; cursor: pointer; -webkit-transition: all .25s ease; -moz-transition: all .25s ease; transition: all .25s ease }
